@@ -4,38 +4,30 @@ import java.util.Arrays;
 
 public class Class {
 
-    private int[] number;
-    private String[] words;
+    private int number;
+    private String word;
     private int[] array;
 
-    public Class(int[] number, String[] words, int[] array) {
+    public Class(int number, String word, int[] array) {
         this.number = number;
-        this.words = words;
+        this.word = word;
         this.array = array;
     }
 
-    @Override
-    public String toString() {
-        return "Class information: " +'\n'+
-                "Number=" + Arrays.toString(number) +'\n'+
-                "Words=" + Arrays.toString(words) +'\n'+
-                "Array=" + Arrays.toString(array) +'\n';
-    }
-
-    public int[] getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(int[] number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 
-    public String[] getWords() {
-        return words;
+    public String getWord() {
+        return word;
     }
 
-    public void setWords(String[] words) {
-        this.words = words;
+    public void setWord(String words) {
+        this.word = word;
     }
 
     public int[] getArray() {
@@ -44,5 +36,14 @@ public class Class {
 
     public void setArray(int[] array) {
         this.array = array;
+    }
+
+    public void showInfo() {
+        System.out.print("Elements of array: ");
+        for (int arr:array) {
+            System.out.print(arr+" ");
+        }
+        System.out.println();
+        System.out.println("Word: "+getWord()+"\nNumber: "+getNumber());
     }
 }
